@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Aladin';
+    src: url('../fonts/Aladin-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sephora';
+    src: url('../fonts/Sephora-Hayden.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TanPearl';
+    src: url('../fonts/TAN-Pearl-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat.Regular.400.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  padding: 0;
+  font: 14px "Montserrat";
+  background-color: #f8f9fa;
+}
+/*NAV BAR*/
+.navbar {
+  background-color: #053827 !important;
+  padding: 15px 15px;
+}
+/*LOGO*/
+.container-logo{
+  margin-right: 10vw;
+  text-align: center;
+}
+.container-logo h1{
+  color: white !important;
+  font-family: 'Aladin';
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.6rem;
+}
+.container-logo h1:hover{
+  color: white;
+}
+.container-logo img{
+  height: 100px;
+  transition: all 0.2s ease;
+}
+.logo-animada{
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px); /* Altura máxima da flutuação */
+  }
+}
+.navbar-brand{
+  text-align: center;
+  letter-spacing: 4px;
+}
+/*MENU*/
+.nav-link {
+  color: white !important;
+  margin-right: 15px !important;
+  font-size: 1.5rem;
+  padding: 8px 15px;
+  transition: all 0.4s ease;
+  border-radius: 8px;
+}
+.nav-link:hover {
+  text-decoration: underline #d3887f;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+}
+.active{
+  transition: all 0.3s ease;
+  text-decoration: underline #d3887f;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+;
+}
+.navbar-nav:hover .active {
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.active:hover {
+  transform: none !important;
+  cursor: default;
+}
+/* CAPAS DOS*/
+.capa-livro {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*DETALHAR*/
+.detalhes-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.detalhes-header {
+  background: linear-gradient(135deg, #0066cc, #0052a3);
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+}
+
+.detalhes-header h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.info-row {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.info-label {
+  font-weight: bold;
+  width: 30%;
+  color: #495057;
+}
+
+.info-value {
+  width: 70%;
+  color: #212529;
+}
+
+.badge-genero {
+  background-color: #17a2b8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.btn-editar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-editar:hover {
+  background-color: #218838;
+  color: white;
+  text-decoration: none;
+}
