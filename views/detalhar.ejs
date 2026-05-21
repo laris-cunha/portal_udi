@@ -11,14 +11,14 @@
     <!--MENU-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">📚 Portal do Livro</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container-logo">
+          <h1 class="navbar-brand" href="/">BOOOOKS</h1>
+          <img src="../images/fantasma.png" alt="Logo" class="logo-animada">
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link" href="/cadastrar">Cadastrar Livro</a>
+            <a class="nav-link" href="/">HOME</a>
+            <a class="nav-link" href="/cadastrar">CADASTRAR LIVRO</a>
           </div>
         </div>
       </div>
@@ -26,46 +26,65 @@
 
     <div class="container mt-5">
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <!--INFORMAÇÕES DO LIVRO -->
+        <div class="col-md-7">
           <div class="detalhes-card">
             <div class="detalhes-header bg-primary text-white">
-              <h3 class="mb-0">📖 Detalhes do Livro</h3>
+              <h3 class="mb-0">Detalhes do Livro</h3>
               <p class="mb-0 mt-2">Informações completas sobre a obra</p>
             </div>
             <div class="card-body p-4">
               <div class="info-row">
-                <div class="info-label">ID do Livro:</div>
+                <div class="info-label">
+                  <img src="../images/id-icon.png" alt="Logo" class="logo-label">
+                  <h4>ID do Livro:</h4>
+                </div>
                 <div class="info-value">
-                  <span class="badge bg-secondary"><%= livro.id %></span>
+                  <span class="badge bg-secondary">#00<%= livro.id %>LI</span>
                 </div>
               </div>
               
               <div class="info-row">
-                <div class="info-label">📖 Título:</div>
+                <div class="info-label">
+                  <img src="../images/titulo-icon.png" alt="Logo" class="logo-label">
+                  <h4>Título:</h4>
+                </div>
                 <div class="info-value">
-                  <strong><%= livro.titulo %></strong>
+                  <span class="info-value"><%= livro.titulo %></span>
                 </div>
               </div>
               
               <div class="info-row">
-                <div class="info-label">✍️ Autor:</div>
+                <div class="info-label">
+                  <img src="../images/autor-icon.png" alt="Logo" class="logo-label">
+                  <h4>Autor:</h4>
+                </div>
                 <div class="info-value"><%= livro.autor %></div>
               </div>
               
               <div class="info-row">
-                <div class="info-label">📚 Gênero:</div>
+                <div class="info-label">
+                  <img src="../images/genero-icon.png" alt="Logo" class="logo-label">
+                  <h4>Gênero:</h4>
+                </div>
                 <div class="info-value">
                   <span class="badge-genero"><%= livro.genero %></span>
                 </div>
               </div>
               
               <div class="info-row">
-                <div class="info-label">📅 Ano de Publicação:</div>
+                <div class="info-label">
+                  <img src="../images/publicacao-icon.png" alt="Logo" class="logo-label">
+                  <h4>Ano de Publicação:</h4>
+                </div>
                 <div class="info-value"><%= livro.ano %></div>
               </div>
               
               <div class="info-row">
-                <div class="info-label">🕒 Data de Cadastro:</div>
+                <div class="info-label">
+                  <img src="../images/cadastro-icon.png" alt="Logo" class="logo-label">
+                  <h4>Data de Cadastro:</h4>
+                </div>
                 <div class="info-value">
                   <%= new Date(livro.data_cadastro).toLocaleDateString('pt-BR') %> às 
                   <%= new Date(livro.data_cadastro).toLocaleTimeString('pt-BR') %>
@@ -74,11 +93,26 @@
             </div>
             <div class="card-footer bg-white border-top-0 p-4">
               <div class="d-flex justify-content-between">
-                <a href="/cadastrar" class="btn-editar">➕ Cadastrar Novo Livro</a>
+                <a href="/" class="btn-voltar">
+                  <img src="../images/voltar.png" alt="Seta Voltar">
+                  VOLTAR
+                </a>
               </div>
             </div>
           </div>
         </div>
+        <!-- CAPA DO LIVRO -->
+        <div class="col-md-5 d-flex">
+          <div class="detalhes-card text-center w-100">
+            <div class="detalhes-header bg-primary text-white capa-header">
+              <h3 class="mb-0">Capa do Livro</h3>
+            </div>
+            <div class="card-body p-4 capa-livro-detalhar">
+              <img src="<%= livro.capa %>" alt="Capa do livro <%= livro.titulo %>" class="img-fluid rounded shadow-sm">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

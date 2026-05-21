@@ -95,27 +95,58 @@ body {
   transform: none !important;
   cursor: default;
 }
+/* CARD*/
+.cabecalho{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.cabecalho h4{
+  margin: 0 !important;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.icone-titulo{
+  max-width:40px;
+  height: auto;
+  display: block;
+}
 /* CAPAS DOS*/
 .capa-livro {
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
   height: auto;
   max-height: 180px;
-  object-fit: cover;
-  border-radius: 5px;
+  object-fit:contain;
+  border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+.card-header{
+  background-color: #053827 !important;
+}
+.btn-details{
+  background-color:#053827 !important;
+  border-color:#053827 !important;
+  transition: all 0.2s ease;
 
+}
+.btn-details:hover{
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0px 2px 4px #00000033 !important;
+}
 /*DETALHAR*/
 .detalhes-card {
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+
 }
 
 .detalhes-header {
-  background: linear-gradient(135deg, #0066cc, #0052a3);
+  background: #053827 !important;
   border-radius: 10px 10px 0 0;
   padding: 20px;
 }
@@ -132,33 +163,116 @@ body {
 }
 
 .info-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: bold;
   width: 30%;
   color: #495057;
 }
+.info-label img{
+  max-width:30px;
+  height: auto;
+  display: block;
+}
+.info-label h4{
+  margin: 0 !important;
+  font-size: 0.9rem;
+  font-weight: bold;
 
+}
 .info-value {
   width: 70%;
   color: #212529;
 }
-
-.badge-genero {
-  background-color: #17a2b8;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 12px;
+.btn-voltar{
+  text-decoration: none;
+  font-weight: bold;
+  color: #053827;
+  font-size: 1.1rem;
+  align-items: center;
+  padding: 8px;
+  transition: all 0.4s ease;
 }
-.btn-editar {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+.btn-voltar img{
+  margin-right: 10px;
+  max-width:30px;
+  height: auto;
   transition: all 0.3s ease;
 }
 
-.btn-editar:hover {
-  background-color: #218838;
-  color: white;
-  text-decoration: none;
+.btn-voltar:hover {
+  transform:translateX(-10px);
+  opacity: 0.9;
+  background-color: #05382744;
+  border-radius: 5px;
+}
+.badge{
+  padding: 8px;
+
+}
+.bg-secondary{
+  background-color: #00000099 !important;
+}
+.capa-livro-detalhar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capa-livro-detalhar img {
+  max-height: 450px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.capa-header {
+  padding: 32px 25px !important;
+}
+/*CADASTRO*/
+.card-header-cadastro{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+.card-header-cadastro img{
+  margin-right: 10px;
+  max-width: 50px;
+  height: auto;
+}
+.form-label img {
+    width: 30px; 
+    height: auto; 
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.form-control:focus {
+  border-color: #053827 !important;
+  box-shadow: 0px 8px 15px #00000033 !important;
+}
+.d-flex a{
+  transition: all 0.2s ease;
+}
+.d-flex a:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0px 2px 4px #00000033 !important;
+}
+.btn-cadastro{
+  background-color: #053827 !important;
+  border-color: #053827 !important;
+  transition: all 0.2s ease;
+}
+.btn-cadastro img{
+  margin-right: 10px;
+  max-width: 15px;
+  height: auto;
+  transition: all 0.2s ease;
+}
+.btn-cadastro:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0px 2px 4px #00000033 !important;
 }

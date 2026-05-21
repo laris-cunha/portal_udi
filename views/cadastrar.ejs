@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body class="bg-light">
+    <!--MENU-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">📚 Portal do Livro</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container-logo">
+          <h1 class="navbar-brand" href="/">BOOOOKS</h1>
+          <img src="../images/fantasma.png" alt="Logo" class="logo-animada">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="/">Home</a>
-            <a class="nav-link active" href="/cadastrar">Cadastrar Livro</a>
+            <a class="nav-link" href="/">HOME</a>
+            <a class="nav-link active" href="/cadastrar">CADASTRAR LIVRO</a>
           </div>
         </div>
       </div>
@@ -27,30 +28,54 @@
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white">
-              <h4 class="card-title mb-0">📝 <%= title %></h4>
+            <div class="card-header bg-primary text-white card-header-cadastro">
+              <img src="../images/cadastrar-titulo-icon.png" alt="Icone Lista" class="icone-titulo">
+              <h4 class="card-title mb-0"><%= title %></h4>
             </div>
             <div class="card-body">
               <form action="/cadastrar" method="POST">
                 <div class="mb-3">
-                  <label for="titulo" class="form-label">Título *</label>
+                  <label for="titulo" class="form-label">
+                    <img src="../images/titulo-icon.png" alt="Ícone">
+                    Título *
+                  </label>
                   <input type="text" class="form-control" id="titulo" name="titulo" required>
                 </div>
                 <div class="mb-3">
-                  <label for="autor" class="form-label">Autor *</label>
+                  <label for="autor" class="form-label">
+                    <img src="../images/autor-icon.png" alt="Ícone">
+                    Autor *
+                  </label>
                   <input type="text" class="form-control" id="autor" name="autor" required>
                 </div>
                 <div class="mb-3">
-                  <label for="genero" class="form-label">Gênero *</label>
+                  <label for="genero" class="form-label">
+                    <img src="../images/genero-icon.png" alt="Ícone">
+                    Gênero *
+                    </label>
                   <input type="text" class="form-control" id="genero" name="genero" required>
                 </div>
                 <div class="mb-3">
-                  <label for="ano" class="form-label">Ano de Publicação *</label>
+                  <label for="ano" class="form-label">
+                    <img src="../images/publicacao-icon.png" alt="Ícone">
+                    Ano de Publicação *
+                  </label>
                   <input type="number" class="form-control" id="ano" name="ano" required>
                 </div>
+                <div class="mb-3">
+                  <label for="ano" class="form-label">
+                    <img src="../images/url-capa-icon.png" alt="Ícone">
+                    URL da capa *
+                  </label>
+                  <input type="text" class="form-control" id="capa" name="capa" required>
+                </div>
+
                 <div class="d-flex justify-content-between">
                   <a href="/" class="btn btn-secondary">Cancelar</a>
-                  <button type="submit" class="btn btn-primary">✅ Cadastrar</button>
+                  <button type="submit" class="btn btn-primary btn-cadastro">
+                    <img src="../images/validar-cadastro.png" alt="Ícone">
+                    Cadastrar
+                  </button>
                 </div>
               </form>
             </div>

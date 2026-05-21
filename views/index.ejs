@@ -25,11 +25,12 @@
     </nav>
 
     <div class="container mt-4">
-      <h1><%= title %></h1>
-      
       <!--LISTA LIVROS-->
       <div class="col-md-12">
-        <h4 class="mb-3">Lista de Livros</h4>
+        <div class="cabecalho">
+          <img src="../images/astericon.png" alt="Icone Lista" class="icone-titulo">
+          <h4 class="mb-3">Lista de Livros</h4>
+        </div>
         <div class="row">
           <% livros.forEach(livro => { %>
             <div class="col-md-4 mb-4">
@@ -43,7 +44,7 @@
                   </div>
                   <p class="card-text"><strong>Autor:</strong> <%= livro.autor %></p>
                   <p class="card-text"><strong>Gênero:</strong> <%= livro.genero %></p>
-                  <a href="/detalhar/<%= livro.id %>" class="btn btn-primary btn-sm mt-2">🔍 Ver Detalhes</a>
+                  <a href="/detalhar/<%= livro.id %>" class="btn btn-primary btn-sm mt-2 btn-details">Ver Detalhes</a>
                 </div>
               </div>
             </div>
