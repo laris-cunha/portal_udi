@@ -19,6 +19,7 @@
           <div class="navbar-nav">
             <a class="nav-link" href="/">HOME</a>
             <a class="nav-link" href="/cadastrar">CADASTRAR LIVRO</a>
+            <a class="nav-link active" href="#">DETALHES DO LIVRO</a>
           </div>
         </div>
       </div>
@@ -96,6 +97,10 @@
                 <a href="/" class="btn-voltar">
                   <img src="../images/voltar.png" alt="Seta Voltar">
                   VOLTAR
+                </a>
+                <a href="/editar/<%= livro.id %>" class="btn btn-primary btn-cadastro">
+                  <img src="../images/validar-cadastro.png" alt="Ícone Editar">
+                  EDITAR LIVRO
                 </a>
               </div>
             </div>
